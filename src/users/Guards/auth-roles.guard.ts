@@ -20,7 +20,9 @@ export class AuthRolesGuard implements CanActivate{
     
     async canActivate(context: ExecutionContext) {
         
-        const roles : userType[]=this.refloctor.getAllAndOverride('roles',[context.getHandler(),context.getClass()])
+        const roles : userType[]=this.refloctor.getAllAndOverride('roles',
+                [context.getHandler(),
+                 context.getClass()])
         if(!roles||roles.length===0) return false;
 
         const request :Request=context.switchToHttp().getRequest();
