@@ -11,7 +11,7 @@ import { ConfigService } from "@nestjs/config";
 @Module({
     controllers: [UsersController],
     providers: [UsersService],
-    //exports: [UsersService],
+    exports: [UsersService, JwtModule],
     imports:[
         
         TypeOrmModule.forFeature([User]),

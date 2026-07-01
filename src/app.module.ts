@@ -3,6 +3,7 @@ import {UsersModule} from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { User } from './users/user.entity';
+import { RidesModule } from './rides/rides.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -26,6 +27,7 @@ import { User } from './users/user.entity';
       }
     }),
     UsersModule,
+    RidesModule,
   ],
   
 

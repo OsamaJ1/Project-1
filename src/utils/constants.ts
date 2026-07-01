@@ -1,9 +1,11 @@
-export const CURRENT_TIMESTAMP='CURRENT_TIMESTAMP(0)';
+export const CURRENT_TIMESTAMP = 'CURRENT_TIMESTAMP(0)';
 
-export enum userType{
+export enum userType {
 
-    ADMIN='admin',
-    NORMAL_USER='normal_user'
+    ADMIN = 'admin',
+    //NORMAL_USER='normal_user',
+    DRIVER = 'driver',
+    PASSANGER = 'passanger'
 }
 
-export const CURRENT_USER_KEY="user";
+export const CURRENT_USER_KEY = "user";
