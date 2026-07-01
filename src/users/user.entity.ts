@@ -22,7 +22,10 @@ export class User {
     userType!: userType;
 
     @Column({ default: false })
-    isAccountVerified!: boolean
+    isAccountVerified!: boolean;
+
+    @Column({ type: 'varchar', nullable: true, default: null })
+    refreshToken!: string | null;
 
     @CreateDateColumn({ type: 'timestamp', default: () => CURRENT_TIMESTAMP })
     createdAt!: Date;

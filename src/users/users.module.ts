@@ -20,8 +20,8 @@ import { ConfigService } from "@nestjs/config";
             useFactory:(config:ConfigService)=>{ 
                 return{
                     global:true,
-                    secret:config.get<string>("JWT_SECRET"),
-                    signOptions:{expiresIn:config.get<string>("JWT_EXPIRES_IN")as any}
+                    secret:config.get<string>("JWT_ACCESS_SECRET"),
+                    signOptions:{expiresIn:config.get<string>("JWT_ACCESS_EXPIRES_IN") as any}
                 }
             }})
     ]
