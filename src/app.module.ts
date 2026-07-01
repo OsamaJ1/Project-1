@@ -20,7 +20,7 @@ import { RidesModule } from './rides/rides.module';
           username: config.get<string>("DB_USENAME"),
           password: config.get<string>("DB_PASSWORD"),
           port: config.get<number>("DB_PORT"),
-          host: 'localhost',
+          host: config.get<string>("DB_HOST") || 'localhost',
           synchronize: process.env.NODE_ENV !== 'production', //only in development true
           entities: [User]
         }
